@@ -69,6 +69,22 @@
     
     _currentAnnotation = [[MKPointAnnotation alloc] init];
     
+    switch (mapType) {
+        case 1:
+            [[self mapView] setMapType:MKMapTypeStandard];
+            
+            break;
+        case 2:
+            [[self mapView] setMapType:MKMapTypeSatellite];
+            break;
+        case 3:
+            [[self mapView] setMapType:MKMapTypeHybrid];
+            break;
+        default:
+            [[self mapView] setMapType:MKMapTypeStandard];
+            break;
+    }
+    
     _currentAnnotation.coordinate = center;
     _currentAnnotation.title = [NSString stringWithFormat:@"lat: %.3f lon: %.3f", currentLocation.coordinate.latitude, currentLocation.coordinate.longitude];
     _currentAnnotation.subtitle = subtitle;

@@ -39,13 +39,15 @@ Global *myVar;   ///object of Global class
     
     [[self locationManager] setDelegate:self];
    
-    if([[self locationManager] respondsToSelector:@selector(requestWhenInUseAuthorization)])
-    {
-        [[self locationManager] requestWhenInUseAuthorization];
-    }
+//    if([[self locationManager] respondsToSelector:@selector(requestWhenInUseAuthorization)])
+//    {
+//        [[self locationManager] requestWhenInUseAuthorization];
+//    }
+    [[self locationManager] requestAlwaysAuthorization];
     
     if ([self.locationManager respondsToSelector:@selector(setAllowsBackgroundLocationUpdates:)])
     {
+        self.locationManager.showsBackgroundLocationIndicator=NO;
         [self.locationManager setAllowsBackgroundLocationUpdates:YES];
     }
     

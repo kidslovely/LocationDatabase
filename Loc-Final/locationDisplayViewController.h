@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-
+#import "Global.h"
 @interface locationDisplayViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *dateField;
 //@property (weak, nonatomic) IBOutlet UITextField *timeField;
