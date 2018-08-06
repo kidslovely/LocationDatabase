@@ -33,7 +33,7 @@ Global *myVar;   ///object of Global class
   
     //////////global/////////
     
-    timeInterval = 10;
+    timeInterval = 15;
     
     _dbObj = [[databaseObject alloc] init];
     
